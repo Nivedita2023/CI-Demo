@@ -1,22 +1,22 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  push
+  #   branches:
+  #     - master
+  # pull_request:
+  #   branches:
+  #     - master
 
 
 jobs:
   linting:
-    runs-on: ${{ matrix.os }}
+    runs-on:  ubuntu-latest 
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        version: ['3.9', '3.10']
+        os: ['windows-latest']
+        version: ['3.10']
 
     steps:
       - name: code checkout
