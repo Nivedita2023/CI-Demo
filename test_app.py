@@ -1,7 +1,7 @@
-# test_app.py
 
 import unittest
 from app import add, sub, mul, divide
+
 
 class TestMathFunctions(unittest.TestCase):
 
@@ -20,6 +20,7 @@ class TestMathFunctions(unittest.TestCase):
     def test_division(self):
         self.assertEqual(divide(10, 2), 5)
         self.assertEqual(divide(-10, -2), 5)
+
 
 if __name__ == '__main__':
     unittest.main()
